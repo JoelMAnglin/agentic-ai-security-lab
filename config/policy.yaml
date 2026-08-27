@@ -1,0 +1,13 @@
+deny_patterns:
+  - "ignore previous instructions"
+  - "reveal system prompt"
+  - "dump secrets"
+  - "disable security"
+sensitive_data_patterns:
+  - "BEGIN PRIVATE KEY"
+  - "password="
+  - "api_key="
+high_risk_tools: [identity.disable_user, secrets.read, payment.send, shell.execute]
+approval_risk_threshold: 40
+deny_risk_threshold: 80
+

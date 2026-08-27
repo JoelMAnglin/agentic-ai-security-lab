@@ -1,0 +1,13 @@
+agents:
+  soc-helper:
+    owner: joel@example.com
+    enabled: true
+    allowed_tools: [ticket.read, ticket.comment, intel.lookup, identity.disable_user, shell.execute]
+    allowed_scopes: [agent:run, ticket:read, ticket:comment, intel:read, identity:disable_user, shell:execute]
+    max_risk_without_approval: 39
+  disabled-bot:
+    owner: security@example.com
+    enabled: false
+    allowed_tools: [ticket.read]
+    allowed_scopes: [agent:run, ticket:read]
+    max_risk_without_approval: 0
